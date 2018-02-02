@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net462</TargetFramework>
+    <TargetFramework>netstandard20</TargetFramework>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
@@ -26,9 +26,7 @@
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.0">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="System.IO" Version="4.3.0" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Compile Include="..\..\..\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>

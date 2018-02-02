@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Remoting;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -53,12 +52,6 @@ namespace Wyam.Common.Documents
         {
             CheckDisposed();
             return GetStream().InitializeLifetimeService();
-        }
-
-        public override ObjRef CreateObjRef(Type requestedType)
-        {
-            CheckDisposed();
-            return GetStream().CreateObjRef(requestedType);
         }
 
         public override Task CopyToAsync(Stream destination, int bufferSize, CancellationToken cancellationToken)
