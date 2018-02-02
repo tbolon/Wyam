@@ -18,7 +18,7 @@ namespace Wyam.Core.Modules.Metadata
     /// the new document. Input documents are ignored.
     /// </summary>
     /// <category>Metadata</category>
-    public class Sql : ReadDataModule<Sql, DataRow>
+    public partial class Sql : ReadDataModule<Sql, DataRow>
     {
         private readonly string _connectionString;
         private readonly string _sql;
@@ -53,7 +53,7 @@ namespace Wyam.Core.Modules.Metadata
                 {
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
-                    return dataTable.AsEnumerable();
+                    return new DataSetExtensions.EnumerableRowCollection<DataRow>(dataTable);
                 }
             }
         }
